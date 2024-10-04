@@ -1,0 +1,16 @@
+<launch>
+
+
+  <!-- Optional arguments: -->
+  <arg name="config"          default="../config/config.yaml" />
+
+
+  <!-- Start node without modified namespace -->
+  <node
+    name="talker"
+    pkg="handpose3d"
+    type="talker.py"
+    output="screen">
+  </node>
+
+</launch>
