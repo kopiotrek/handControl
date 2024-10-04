@@ -6,11 +6,7 @@ from std_msgs.msg import String
 def talker():
     #create a new publisher. we specify the topic name, then type of message then the queue size
     pub = rospy.Publisher('chatter', String, queue_size=10)
-    #we need to initialize the node
-    # In ROS, nodes are uniquely named. If two nodes with the same
-    # node are launched, the previous one is kicked off. The
-    # anonymous=True flag means that rospy will choose a unique
-    # name for our 'talker' node 
+
     rospy.init_node('talker', anonymous=True)
     #set the loop rate
     rate = rospy.Rate(1) # 1hz
